@@ -8,7 +8,7 @@ public class BallLauncher : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        ballSpeed = 710f;
+        ballSpeed = 810f;
 	}
 	
 	// Update is called once per frame
