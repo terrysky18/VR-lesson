@@ -4,7 +4,7 @@ using System.Collections;
 
 public class ScoreKeeper : MonoBehaviour {
 
-    private int play_score;
+    int play_score;
 	// Use this for initialization
 	void Start () {
         play_score = 0;
@@ -16,7 +16,8 @@ public class ScoreKeeper : MonoBehaviour {
 
 	}
 
-    void OnCollisionEnter (Collision col)
+    // public function to access by another script
+    public void IncrementScore()
     {
         play_score++;
         Debug.Log(play_score);
