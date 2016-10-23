@@ -17,9 +17,9 @@ public class ScoreKeeper : MonoBehaviour {
 	}
 
     // public function to access by another script
-    public void IncrementScore()
+    public void IncrementScore(int amount)
     {
-        play_score++;
+        play_score += amount;
         Debug.Log(play_score);
     }
 }

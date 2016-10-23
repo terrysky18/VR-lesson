@@ -4,6 +4,7 @@ using System.Collections;
 /*
  * The script is developmental
  * No longer in use
+ * it's kept as an example
  */
 
 public class BallSpawner : MonoBehaviour {
