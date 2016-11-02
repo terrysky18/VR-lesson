@@ -20,6 +20,6 @@ public class ScoreKeeper : MonoBehaviour {
     public void IncrementScore(int amount)
     {
         play_score += amount;
-        Debug.Log(play_score);
+        //Debug.Log(play_score);
     }
 }

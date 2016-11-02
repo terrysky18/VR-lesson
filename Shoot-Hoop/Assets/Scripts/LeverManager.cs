@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class LeverManager : MonoBehaviour {
 
+    private float timeTillNextLevel = 5f;
+
     private int current_index;
 
 	// Use this for initialization
@@ -18,9 +20,15 @@ public class LeverManager : MonoBehaviour {
         {
             LoadNextScene();
         }
+        timeTillNextLevel -= Time.deltaTime;
+        Debug.Log("Time until next level:  " + timeTillNextLevel);
+        if(timeTillNextLevel <= 0)
+        {
+            LoadNextScene();
+        }
 	}
 
-    void LoadNextScene()
+    public void LoadNextScene()
     {
         // Load currentIndex + 1
         SceneManager.LoadScene(current_index + 1);

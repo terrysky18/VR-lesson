@@ -3,7 +3,7 @@ using System.Collections;
 
 /*
  * The script is developmental
- * No longer in use
+ * NO LONGER IN USE
  * it's kept as an example
  */
 
