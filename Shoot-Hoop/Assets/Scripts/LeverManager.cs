@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class LeverManager : MonoBehaviour {
     public float timeTillNextLevel;
 
+    private float gameTimeLimit;
     private int current_scene_index;
     private bool auto_progress;
     // Use this for initialization
@@ -12,6 +13,7 @@ public class LeverManager : MonoBehaviour {
         // Load scene
         current_scene_index = SceneManager.GetActiveScene().buildIndex;
         auto_progress = false;
+        gameTimeLimit = timeTillNextLevel;
 	}
 	
 	// Update is called once per frame
@@ -30,8 +32,8 @@ public class LeverManager : MonoBehaviour {
                 Debug.Log("Time to next scene:  " + timeTillNextLevel);
                 if (timeTillNextLevel <= 0)
                 {
-                    // time is up
-
+                    // time is up; reset timeTillNextLevel
+                    timeTillNextLevel = gameTimeLimit;
                     LoadNextScene();
                 }
             }
