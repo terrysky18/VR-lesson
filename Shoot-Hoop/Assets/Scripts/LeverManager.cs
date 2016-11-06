@@ -28,8 +28,8 @@ public class LeverManager : MonoBehaviour {
             if (current_scene_index == 1)
             {
                 timeTillNextLevel -= Time.deltaTime;
-                Debug.Log("current level index:  " + current_scene_index);
-                Debug.Log("Time to next scene:  " + timeTillNextLevel);
+                //Debug.Log("current level index:  " + current_scene_index);
+                //Debug.Log("Time to next scene:  " + timeTillNextLevel);
                 if (timeTillNextLevel <= 0)
                 {
                     // time is up; reset timeTillNextLevel
@@ -47,9 +47,8 @@ public class LeverManager : MonoBehaviour {
         timeTillNextLevel -= Time.deltaTime;
         // check total number of scenes
         int scene_count = SceneManager.sceneCountInBuildSettings;
-        Debug.Log("Auto progress:  " + auto_progress);
-
-        Debug.Log("Time until next level:  " + timeTillNextLevel);
+        //Debug.Log("Auto progress:  " + auto_progress);
+        //Debug.Log("Time until next level:  " + timeTillNextLevel);
         //Debug.Log("Total scenes in build setting:  " + SceneManager.sceneCountInBuildSettings);
 
         if (timeTillNextLevel <= 0)
@@ -62,6 +61,11 @@ public class LeverManager : MonoBehaviour {
             }
             SceneManager.LoadScene(current_scene_index + 1);
         }
+    }
+
+    public float ShowTimeRemaining()
+    {
+        return timeTillNextLevel;
     }
 
     public void LoadNextScene()

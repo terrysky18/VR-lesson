@@ -3,11 +3,11 @@ using System.Collections;
 
 public class BallLauncher : MonoBehaviour {
 
-    public float ballSpeed;
     public GameObject ballPrefab;
+    private float ballSpeed;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         ballSpeed = 810f;
 	}
 	
